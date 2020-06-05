@@ -1,9 +1,6 @@
-import sys
 import os
 import os.path
-from pathlib import Path
 import shutil
-print(sys.platform)
 
 
 #Добавить путь для удаления папок
@@ -20,8 +17,8 @@ def write_dir_del_folder(text=None):
             f.writelines(text)
 
 
-#Склеить строку пути и дирикторий
-def way_create():
+#Склеить пути и дирикторий
+def delet():
     with open('way.txt', 'r', encoding='utf-8') as f:
         for line_w in f:
             result_w = line_w
@@ -30,17 +27,22 @@ def way_create():
             result_d = line_d.replace('\n', '')
             result_dir = os.path.join(result_w, result_d)
             path = os.path.join(os.path.abspath(os.path.dirname(__file__)), result_dir)
-            shutil.rmtree(path, ignore_errors=True)
+            if os.path.isfile(path):
+                try:
+                    os.unlink(path, dir_fd=None)
+                    print(path, "Ok")
+                except OSError as e:
+                    print("Ошибка: %s : %s" % (path, e.strerror))
+            else:
+                try:
+                    shutil.rmtree(path)
+                    print(path, "Ok")
+                except OSError as e:
+                    print("Ошибка: %s : %s" % (path, e.strerror))
+        print("Очистка каталогов и файлов прошла успешно!")
 
-
-#Смена дириктории
-def change_dir(name):
-    result = os.chdir(name)
-    print(os.getcwd())
-
-#Удаление дирикторий
 
 if __name__ == '__main__':
     #write_dir_del_folder('test1\n' 'test2\n' 'test3\n')
     #write_way('/storage/shared/')
-    way_create()
+    delet()

@@ -1,3 +1,6 @@
+Android/data/com.android.browser
+Android/data/com.android.calendar
+Android/data/com.android.alarmclock
 PPS
 .profig.os
 Ringtones
@@ -30,3 +33,4 @@ viber
 VK
 WhatsApp
 .profig.os
+.uxip
