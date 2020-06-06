@@ -1,1 +1,1 @@
-/data/data/com.termux/files/home/storage/shared/
+/data/data/com.termux/files/home/storage/shared

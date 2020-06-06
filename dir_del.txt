@@ -2,6 +2,7 @@ Android/data/com.android.browser
 Android/data/com.android.calendar
 Android/data/com.android.alarmclock
 PPS
+Customize
 .profig.os
 Ringtones
 mz_browser_crash_log
