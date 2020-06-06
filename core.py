@@ -9,7 +9,7 @@ def write_way(text):
         try:
             f.writelines('{0}\n'.format(text))
         except TypeError:
-            print('Необходимо указать путь к корневому каталогу')
+            print('Необходимо указать путь к корневому каталогу.\nПо умолчанию на андроид устройствах следующий путь:\n/data/data/com.termux/files/home/storage/shared')
 
 
 #Добавить дириктррии для удаления

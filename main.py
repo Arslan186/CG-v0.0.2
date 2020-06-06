@@ -10,7 +10,7 @@ else:
         try:
             text = sys.argv[2]
         except:
-            print('Укажите вторым аргументом путь к корневому каталогу')
+            print('Необходимо указать путь к корневому каталогу.\nПо умолчанию на андроид устройствах следующий путь:\n/data/data/com.termux/files/home/storage/shared')
         else:
             write_way(text)
     elif command == 'dir':
