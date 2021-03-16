@@ -24,7 +24,7 @@ def write_dir_del_folder(text):
 def delet():
     with open('way.txt', 'r', encoding='utf-8') as f:
         for line_w in f:
-            result_w = line_w
+            result_w = line_w.replace('\n', '')
     with open('dir_del.txt', 'r', encoding='utf-8') as f:
         for line_d in f:
             result_d = line_d.replace('\n', '')
