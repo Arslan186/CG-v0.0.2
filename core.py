@@ -1,7 +1,7 @@
 import os
 import os.path
 import shutil
-
+from termcolor import colored
 
 #Добавить путь для удаления папок
 def write_way(text):
@@ -33,16 +33,16 @@ def delet():
             if os.path.isfile(path):
                 try:
                     os.unlink(path, dir_fd=None)
-                    print(path, "Ok")
+                    print(path, colored("Ok", 'green'))
                 except OSError as e:
-                    print("Ошибка: %s : %s" % (path, e.strerror))
+                    print(colored("Не требует очистки: %s : %s", 'red') % (path, e.strerror))
             else:
                 try:
                     shutil.rmtree(path)
-                    print(path, "Ok")
+                    print(path, colored("Ok", 'green'))
                 except OSError as e:
-                    print("Ошибка: %s : %s" % (path, e.strerror))
-        print("Очистка каталогов и файлов прошла успешно!")
+                    print(colored("Не требует очистки: %s : %s", 'red') % (path, e.strerror))
+        print(colored("Очистка каталогов и файлов прошла успешно!", 'green'))
 
 
 if __name__ == '__main__':
