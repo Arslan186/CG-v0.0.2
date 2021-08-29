@@ -35,19 +35,9 @@ def print_platform():
     print_defis()
 
 
-
 def print_menu():
     figlet()
     print_platform()
-    print(colored('серый', 'grey'))
-    print(colored('красный', 'red'))
-    print(colored('зеленый', 'green'))
-    print(colored('желтый', 'yellow'))
-    print(colored('синий', 'blue'))
-    print(colored('пурпурный', 'magenta'))
-    print(colored('голубой', 'cyan'))
-    print(colored('белый', 'white'))
-
     print_defis()
     print(colored('{:^55s}'.format('Главное меню'), 'green'))
     for key in MENU_OPTIONS.keys():
@@ -65,10 +55,12 @@ def option1():
     write_way(input(colored('Укажите корневой каталог: ', 'green')))
     option_ok()
 
+
 def option2():
     print(colored('Для возврата в предыдущее меню используйте Ctrl+C', 'grey'))
     write_dir_del_folder(input(colored('Укажите файлы и папки для очистки: ', 'green')))
     option_ok()
+
 
 def option3():
     delet()
@@ -91,14 +83,12 @@ def menu_start():
             try:
                 while(True):
                     option2()
-                    print('ok')
             except KeyboardInterrupt:
                 pass
         elif option == 3:
             option3()
             exit()
         elif option == 4:
-            print(colored('Спасибо что пользуютесь нашим программным обечпечением', 'red'))
             exit()
         else:
             print(colored('Неверная команда, введите число от 1 до 4', 'red'))
