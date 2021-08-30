@@ -33,15 +33,15 @@ def delet():
             if os.path.isfile(path):
                 try:
                     os.unlink(path, dir_fd=None)
-                    print(path, colored("Ok", 'green'))
+                    print(path, colored("Ok", 'blue'))
                 except OSError as e:
-                    print(colored("Не требует очистки: %s : %s", 'red') % (path, e.strerror))
+                    print(colored("Не требует очистки: %s : %s", 'magenta') % (path, e.strerror))
             else:
                 try:
                     shutil.rmtree(path)
-                    print(path, colored("Ok", 'green'))
+                    print(path, colored("Ok", 'blue'))
                 except OSError as e:
-                    print(colored("Не требует очистки: %s : %s", 'red') % (path, e.strerror))
+                    print(colored("Не требует очистки: %s : %s", 'magenta') % (path, e.strerror))
         print(colored("Очистка каталогов и файлов прошла успешно!", 'green'))
 
 
