@@ -5,7 +5,7 @@ from termcolor import colored
 
 #Добавить путь для удаления папок
 def write_way(text):
-    with open('way.txt', 'a', encoding='utf-8' ) as f:
+    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/way.txt', 'a', encoding='utf-8' ) as f:
         try:
             f.writelines('{0}\n'.format(text))
         except TypeError:
@@ -14,7 +14,7 @@ def write_way(text):
 
 #Добавить дириктррии для удаления
 def write_dir_del_folder(text):
-    with open('dir_del.txt', 'a', encoding='utf-8') as f:
+    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/dir_del.txt', 'a', encoding='utf-8') as f:
         try:
             f.writelines('{0}\n'.format(text))
         except TypeError:
@@ -22,10 +22,10 @@ def write_dir_del_folder(text):
 
 #Склеить пути дирикторий
 def delet():
-    with open('way.txt', 'r', encoding='utf-8') as f:
+    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/way.txt', 'r', encoding='utf-8') as f:
         for line_w in f:
             result_w = line_w.replace('\n', '')
-    with open('dir_del.txt', 'r', encoding='utf-8') as f:
+    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/dir_del.txt', 'r', encoding='utf-8') as f:
         for line_d in f:
             result_d = line_d.replace('\n', '')
             result_dir = os.path.join(result_w, result_d)
