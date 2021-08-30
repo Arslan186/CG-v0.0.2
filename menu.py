@@ -57,6 +57,11 @@ def option1():
 
 
 def option2():
+    print(colored('Список файлов и каталогов для отслеживания:', 'yellow'))
+    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/dir_del.txt', 'r', encoding='utf-8') as dir_txt_f:
+        dir_txt = ''
+        for dir_txt in dir_txt_f:
+            print(colored(dir_txt, 'yellow'))
     print(colored('Для возврата в предыдущее меню используйте Ctrl+C', 'grey'))
     write_dir_del_folder(input(colored('Укажите файлы и папки для очистки: ', 'green')))
     option_ok()
