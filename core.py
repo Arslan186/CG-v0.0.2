@@ -5,7 +5,7 @@ from termcolor import colored
 
 #Добавить путь для удаления папок
 def write_way(text):
-    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/way.txt', 'a', encoding='utf-8' ) as f:
+    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/way.txt', 'w', encoding='utf-8' ) as f:
         try:
             f.writelines('{0}\n'.format(text))
         except TypeError:
