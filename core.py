@@ -19,15 +19,15 @@ def delet_file_dir():
             if os.path.isfile(path):
                 try:
                     os.unlink(path, dir_fd=None)
-                    print('{}\n{}'.format(OK + 'Файл удален' + RESET, path))
+                    print('{}\n{}'.format(OK + 'Файл удален' + RESET, TEXT_COLOR_DIR + path + RESET))
                     print(DEFIS)
                 except OSError as e:
-                    print('{}\n{}'.format(ERROR + 'Файла не существует' + RESET, path))
+                    print('{}\n{}'.format(ERROR + 'Файла не существует' + RESET, TEXT_COLOR_DIR + path + RESET))
                     print(DEFIS)
             else:
                 try:
                     shutil.rmtree(path)
-                    print('{}\n{}'.format(OK + 'Каталог удален' + RESET, path))
+                    print('{}\n{}'.format(OK + 'Каталог удален' + RESET, TEXT_COLOR_DIR + path + RESET))
                     print(DEFIS)
                 except OSError as e:
                     print('{}\n{}'.format(ERROR + 'Каталог не требует очистки:' + RESET, TEXT_COLOR_DIR + path + RESET))
