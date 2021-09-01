@@ -1,7 +1,9 @@
 from variable import *
+
+
 #Добавляем файлы и папки для очистки
 def add_directories(text):
-    with open('/data/data/com.termux/files/home/storage/shared/CG-v0.0.2/add_dir.txt', 'a', encoding='utf-8') as f:
+    with open('add_dir.txt', 'a', encoding='utf-8') as f:
         if len(text) > 0:
             f.writelines('{0}\n'.format(text))
             print(OK + 'Файл или каталог успешно добавлен' + RESET)
