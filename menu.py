@@ -18,7 +18,7 @@ MENU_OPTIONS = {
 
 
 def print_defis():
-    print('{:^10s}'.format(DEFIS))
+    print('{:^10s}'.format(DEFIS_COLOR + DEFIS + RESET))
 
 
 def figlet():
@@ -31,44 +31,42 @@ def print_platform():
     PUNAME = platform.uname()
     print_defis()
     print('OS - {0[0]}\nАрхитектура - {0[4]}'.format(PUNAME))
-    print_defis()
 
 
 def print_menu():
     figlet()
     print_platform()
     print_defis()
-    print('{:^55s}'.format('Главное меню'))
+    print('{:^65s}'.format(TEXT_COLOR + 'Главное меню' + RESET))
     for key in MENU_OPTIONS.keys():
         print_defis()
         print('{:>5} {:>3} {:>2} {:>2}'.format('|',key, '---', MENU_OPTIONS[key]))
 
 
 def option_ok():
-    print('Выполнено')
+    print(OK + 'Выполнено' + RESET)
 
 
 def option1():
-    print('По умолчанию корневой каталог на андроид устройствах:')
-    print('/data/data/com.termux/files/home/storage/shared')
-    root_dir(input('Укажите корневой каталог: '))
+    print(OK + 'По умолчанию корневой каталог на андроид устройствах:' + RESET)
+    print(ERROR + '/data/data/com.termux/files/home/storage/shared' + RESET)
+    root_dir(input(TEXT_COLOR_INPUT + 'Укажите корневой каталог: ' + RESET))
     option_ok()
 
 
 def option2():
-    print('Список файлов и каталогов для отслеживания:')
+    print(OK + 'Список файлов и каталогов для отслеживания:' + RESET)
     with open('add_dir.txt', 'r', encoding='utf-8') as dir_txt_f:
         dir_txt = ''
         for dir_txt in dir_txt_f:
             print(dir_txt)
-    print('Для возврата в предыдущее меню используйте Ctrl+C')
-    add_directories(input('Укажите файлы и папки для очистки: '))
+    print(ERROR + 'Для возврата в предыдущее меню используйте Ctrl+C' + RESET)
+    add_directories(input(TEXT_COLOR_INPUT + 'Укажите файлы и папки для очистки: ' + RESET))
     option_ok()
 
 
 def option3():
     delet_file_dir()
-    option_ok()
 
 
 def menu_start():
@@ -77,9 +75,9 @@ def menu_start():
         option = ''
         print_defis()
         try:
-            option = int(input('Введите команду: '))
+            option = int(input(TEXT_COLOR_INPUT + 'Введите команду: ' + RESET))
         except:
-            print('error')
+            print(ERROR + 'Вы ввели не число' + RESET)
         #Check what choice was entered and act accordingly
         if option == 1:
             option1()
@@ -95,7 +93,7 @@ def menu_start():
         elif option == 4:
             exit()
         else:
-            print('Неверная команда, введите число от 1 до 4')
+            print(ERROR + 'Неверная команда, введите число от 1 до 4' + RESET)
 
 if __name__=='__main__':
     menu_start()
