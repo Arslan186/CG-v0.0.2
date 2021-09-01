@@ -9,13 +9,6 @@ from variable import *
 from add_directories import *
 from root_dir import *
 
-MENU_OPTIONS = {
-    1: 'Укажите корневой каталог',
-    2: 'Укажите файлы и папки для очистки',
-    3: 'Очистить',
-    4: 'Выход',
-}
-
 
 def print_defis():
     print('{:^10s}'.format(DEFIS_COLOR + DEFIS + RESET))
