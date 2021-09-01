@@ -1,6 +1,7 @@
 from variable import *
 from root_dir import *
 from add_directories import *
+from core import *
 
 
 def option_ok():
@@ -23,4 +24,7 @@ def option_add_dir_2():
     print(ERROR + 'Для возврата в предыдущее меню используйте Ctrl+C' + RESET)
     add_directories(input(TEXT_COLOR_INPUT + 'Укажите файлы и папки для очистки: ' + RESET))
     option_ok()
-            
+
+
+def option_del_file_3():
+    delet_file_dir()

@@ -1,5 +1,4 @@
 import sys
-from core import *
 from datetime import datetime
 import threading
 import pyfiglet
@@ -32,14 +31,6 @@ def print_menu():
         print('{:>5} {:>3} {:>2} {:>2}'.format('|',key, '---', MENU_OPTIONS[key]))
 
 
-def option_ok():
-    print(OK + 'Выполнено' + RESET)
-
-
-def option3():
-    delet_file_dir()
-
-
 def menu_start():
     while(True):
         print_menu()
@@ -59,7 +50,7 @@ def menu_start():
             except KeyboardInterrupt:
                 pass
         elif option == 3:
-            option3()
+            option_del_file_3()
             exit()
         elif option == 4:
             exit()
