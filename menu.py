@@ -1,9 +1,9 @@
 import sys
 from datetime import datetime
-import threading
 import pyfiglet
 import platform
 import collections
+#User.py
 from variable import *
 from general_def import *
 from option import *
@@ -40,7 +40,6 @@ def menu_start():
             option = int(input(TEXT_COLOR_INPUT + 'Введите команду: ' + RESET))
         except:
             print(ERROR + 'Вы ввели не число' + RESET)
-        #Check what choice was entered and act accordingly
         if option == 1:
             option_root_dir_1()
         elif option == 2:
