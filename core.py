@@ -4,6 +4,7 @@ import shutil
 from variable import *
 from root_dir import *
 from add_directories import *
+from general_def import *
 
 
 #Функция удаления файлов и папок
@@ -20,18 +21,18 @@ def delet_file_dir():
                 try:
                     os.unlink(path, dir_fd=None)
                     print('{}\n{}'.format(OK + 'Файл удален' + RESET, TEXT_COLOR_DIR + path + RESET))
-                    print(DEFIS)
+                    print_defis()
                 except OSError as e:
                     print('{}\n{}'.format(ERROR + 'Файла не существует' + RESET, TEXT_COLOR_DIR + path + RESET))
-                    print(DEFIS)
+                    print_defis()
             else:
                 try:
                     shutil.rmtree(path)
                     print('{}\n{}'.format(OK + 'Каталог удален' + RESET, TEXT_COLOR_DIR + path + RESET))
-                    print(DEFIS)
+                    print_defis()
                 except OSError as e:
                     print('{}\n{}'.format(ERROR + 'Каталог не требует очистки:' + RESET, TEXT_COLOR_DIR + path + RESET))
-                    print(DEFIS)
+                    print_defis()
         print(OK + "Очистка каталогов и файлов прошла успешно!" + RESET)
 
 
