@@ -8,10 +8,7 @@ import collections
 from variable import *
 from add_directories import *
 from root_dir import *
-
-
-def print_defis():
-    print('{:^10s}'.format(DEFIS_COLOR + DEFIS + RESET))
+from general_def import *
 
 
 def figlet():
