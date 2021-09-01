@@ -30,7 +30,7 @@ def delet_file_dir():
                     print('{}\n{}'.format(OK + 'Каталог удален' + RESET, path))
                     print(DEFIS)
                 except OSError as e:
-                    print('{}\n{}'.format(ERROR + 'Каталог не требует очистки:' + RESET, path))
+                    print('{}\n{}'.format(ERROR + 'Каталог не требует очистки:' + RESET, TEXT_COLOR_DIR + path + RESET))
                     print(DEFIS)
         print(OK + "Очистка каталогов и файлов прошла успешно!" + RESET)
 
