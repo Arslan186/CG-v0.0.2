@@ -13,7 +13,7 @@ def option_root_dir_1():
 
 def option_add_dir_2():
     print(OK + 'Список файлов и каталогов для отслеживания:' + RESET)
-    with open('add_dir.txt', 'r', encoding='utf-8') as f:
+    with open(VAR_ADD, 'r', encoding='utf-8') as f:
         dir_txt_f = [dir_txt for dir_txt in f.read().split('\n') if dir_txt]
         for dir_txt in dir_txt_f:
             print(dir_txt)
