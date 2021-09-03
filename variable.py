@@ -17,3 +17,7 @@ MENU_OPTIONS = {
         3: 'Очистить',
         4: 'Выход',
         }
+
+
+VAR_ROOT = 'root_dir.txt'
+VAR_ADD = 'add_dir.txt'
