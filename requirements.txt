@@ -1,2 +1,4 @@
 colored --upgrade
 pyfiglet
+rich
+textual
