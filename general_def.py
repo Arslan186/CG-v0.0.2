@@ -7,4 +7,4 @@ def print_defis():
 
 def option_ok():
     print(OK + 'Выполнено' + RESET)
-    print0defis()
+    print_defis()
