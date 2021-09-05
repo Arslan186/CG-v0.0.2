@@ -7,6 +7,7 @@ from add_directories import *
 from general_def import *
 
 
+
 #Функция удаления файлов и папок
 def delet_file_dir():
     with open('root_dir.txt', 'r', encoding='utf-8') as f:
