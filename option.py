@@ -1,8 +1,4 @@
-from variable import *
-from root_dir import *
-from add_directories import *
-from core import *
-from general_def import *
+from def_root_add import *
 
 def option_root_dir_1():
     print(OK + 'По умолчанию корневой каталог на андроид устройствах:' + RESET)

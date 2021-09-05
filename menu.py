@@ -1,12 +1,4 @@
-import sys
-from datetime import datetime
-import pyfiglet
-import platform
-import collections
-#User.py
-from variable import *
-from general_def import *
-from option import *
+from def_root_add import *
 
 
 def figlet():
