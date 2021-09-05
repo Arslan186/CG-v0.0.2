@@ -40,12 +40,13 @@ def menu_start():
             option = int(input(TEXT_COLOR_INPUT + 'Введите команду: ' + RESET))
         except:
             print(ERROR + 'Вы ввели не число' + RESET)
+            clearConsole()
         if option == 1:
             try:
                 while(True):
                     option_root_dir_1()
             except KeyboardInterrupt:
-                pass
+                clearConsole()
         elif option == 2:
             try:
                 while(True):
@@ -53,8 +54,11 @@ def menu_start():
             except KeyboardInterrupt:
                 pass
         elif option == 3:
-            option_del_file_3()
-            exit()
+            try:
+                option_del_file_3()
+            except OSError:
+                clearConsole()
+                print_menu()
         elif option == 4:
             exit()
         else:

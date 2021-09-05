@@ -12,6 +12,7 @@ def option_root_dir_1():
     print(ERROR + 'Для возврата в предыдущее меню используйте Ctrl+C' + RESET)
     print_defis()
     root_dir(input(TEXT_COLOR_INPUT + 'Укажите корневой каталог: ' + RESET))
+    clearConsole()
     option_ok()
 
 
@@ -33,6 +34,8 @@ def option_add_dir_2():
     print(ERROR + 'Для возврата в предыдущее меню используйте Ctrl+C' + RESET)
     print_defis()
     add_directories(input(TEXT_COLOR_INPUT + 'Укажите файлы и папки для очистки: ' + RESET))
+    clearConsole()
+    option_ok()
 
 
 def option_del_file_3():
