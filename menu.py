@@ -41,7 +41,11 @@ def menu_start():
         except:
             print(ERROR + 'Вы ввели не число' + RESET)
         if option == 1:
-            option_root_dir_1()
+            try:
+                while(True):
+                    option_root_dir_1()
+            except KeyboardInterrupt:
+                pass
         elif option == 2:
             try:
                 while(True):
