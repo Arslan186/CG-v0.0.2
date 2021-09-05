@@ -18,6 +18,6 @@ MENU_OPTIONS = {
         4: 'Выход',
         }
 
-
+#Variable function foot_dir & add_directories
 VAR_ROOT = 'root_dir.txt'
 VAR_ADD = 'add_dir.txt'
