@@ -1,5 +1,5 @@
 from def_root_add import *
-
+from option import *
 
 def figlet():
     CG = pyfiglet.figlet_format("C|G", font = "isometric3")
@@ -30,6 +30,7 @@ def menu_start():
         print_defis()
         try:
             option = int(input(TEXT_COLOR_INPUT + 'Введите команду: ' + RESET))
+            clearConsole()
         except:
             print(ERROR + 'Вы ввели не число' + RESET)
             clearConsole()

@@ -1,4 +1,4 @@
-from stting import *
+from setting import *
 
 
 #Добавить корневой путь для очистки
