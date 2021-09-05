@@ -52,7 +52,7 @@ def menu_start():
                 while(True):
                     option_add_dir_2()
             except KeyboardInterrupt:
-                pass
+                clearConsole()
         elif option == 3:
             try:
                 option_del_file_3()
