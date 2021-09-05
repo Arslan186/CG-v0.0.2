@@ -24,10 +24,10 @@ def add_directories(text):
 
 #Функция удаления файлов и папок
 def delet_file_dir():
-    with open('root_dir.txt', 'r', encoding='utf-8') as f:
+    with open(VAR_ROOT, 'r', encoding='utf-8') as f:
         for root_dir_r in f:
             root_dir = root_dir_r.replace('\n', '')
-    with open('add_dir.txt', 'r', encoding='utf-8') as f:
+    with open(VAR_ADD, 'r', encoding='utf-8') as f:
         for add_dir_r in f:
             add_dir = add_dir_r.replace('\n', '')
             result = os.path.join(root_dir, add_dir)

@@ -1,11 +1,11 @@
 from def_root_add import *
 
 def option_root_dir_1():
-    print(OK + 'По умолчанию корневой каталог на андроид устройствах:' + RESET)
+    print(OK + DEFAULT_ROOT + RESET)
     print_defis()
-    print(ERROR + '/data/data/com.termux/files/home/storage/shared' + RESET)
+    print(ERROR + DEFAULT_ROOT_DIR + RESET)
     print_defis()
-    print(ERROR + 'Для возврата в предыдущее меню используйте Ctrl+C' + RESET)
+    print(ERROR + CTRL_C + RESET)
     print_defis()
     root_dir(input(TEXT_COLOR_INPUT + 'Укажите корневой каталог: ' + RESET))
     clearConsole()
@@ -27,12 +27,9 @@ def option_add_dir_2():
         for dir_txt in dir_txt_f:
             print(dir_txt)
             print_defis()
-    print(ERROR + 'Для возврата в предыдущее меню используйте Ctrl+C' + RESET)
+    print(ERROR + CTRL_C + RESET)
     print_defis()
     add_directories(input(TEXT_COLOR_INPUT + 'Укажите файлы и папки для очистки: ' + RESET))
     clearConsole()
     option_ok()
 
-
-def option_del_file_3():
-    delet_file_dir()

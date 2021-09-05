@@ -1,5 +1,6 @@
 from def_root_add import *
 from option import *
+from setting import *
 
 def figlet():
     CG = pyfiglet.figlet_format("C|G", font = "isometric3")
@@ -48,10 +49,11 @@ def menu_start():
                 clearConsole()
         elif option == 3:
             try:
-                option_del_file_3()
-            except OSError:
+                delet_file_dir()
+            except OSError as e:
                 clearConsole()
-                print_menu()
+                print(e)
+                
         elif option == 4:
             exit()
         else:
