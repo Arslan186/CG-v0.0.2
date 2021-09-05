@@ -11,4 +11,4 @@ def root_dir(text):
 
 
 if __name__ == '__main__':
-    root_dir('/data/data/com.termux/files/home/storage/shared/')
+    root_dir('test/test')

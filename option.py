@@ -6,7 +6,11 @@ from general_def import *
 
 def option_root_dir_1():
     print(OK + 'По умолчанию корневой каталог на андроид устройствах:' + RESET)
+    print_defis()
     print(ERROR + '/data/data/com.termux/files/home/storage/shared' + RESET)
+    print_defis()
+    print(ERROR + 'Для возврата в предыдущее меню используйте Ctrl+C' + RESET)
+    print_defis()
     root_dir(input(TEXT_COLOR_INPUT + 'Укажите корневой каталог: ' + RESET))
     option_ok()
 
